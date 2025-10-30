@@ -25,7 +25,7 @@ if start_btn:
     metrics = pd.DataFrame({"CH": CH, "CM": CM, "Eff": Eff})
 
     for t in range(sim_time):
-        frame_positions = pos[:, :, t]
+        frame_positions = np.array(pos)
         frame_clusters = clusters[:, t]
 
         df = pd.DataFrame(frame_positions, columns=["x", "y", "z"])

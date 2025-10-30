@@ -26,7 +26,7 @@ if start_btn:
 
     for t in range(sim_time):
         frame_positions = np.array(pos)
-        frame_clusters = clusters[:, t]
+        frame_clusters = np.array(clusters)
 
         df = pd.DataFrame(frame_positions, columns=["x", "y", "z"])
         df["cluster"] = frame_clusters
